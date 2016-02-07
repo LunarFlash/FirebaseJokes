@@ -3,7 +3,7 @@
 //  FirebaseJokes
 //
 //  Created by Matthew Maher on 1/23/16.
-//  Copyright © 2016 Matt Maher. All rights reserved.
+//  Copyright © 2016 Yi Wang. All rights reserved.
 //
 
 import Foundation
@@ -11,52 +11,36 @@ import Firebase
 
 class Joke {
     
-    private var _jokeRef: Firebase!
+    private var jokeRef: Firebase!
+    private(set) var jokeKey: String!
+    private(set) var jokeText: String!
+    private(set) var jokeVotes: Int!
+    private(set) var username: String!
     
-    private var _jokeKey: String!
-    private var _jokeText: String!
-    private var _jokeVotes: Int!
-    private var _username: String!
-    
-    var jokeKey: String {
-        return _jokeKey
-    }
-    
-    var jokeText: String {
-        return _jokeText
-    }
-    
-    var jokeVotes: Int {
-        return _jokeVotes
-    }
-    
-    var username: String {
-        return _username
-    }
     
     // init new joke
     
     init(key: String, dictionary: Dictionary<String, AnyObject>) {
-        self._jokeKey = key
+        self.jokeKey = key
         
         // Within the Joke, or Key, the following properties are children
         
         if let votes = dictionary["votes"] as? Int {
-            self._jokeVotes = votes
+            self.jokeVotes = votes
         }
         
         if let joke = dictionary["jokeText"] as? String {
-            self._jokeText = joke
+            self.jokeText = joke
         }
         
         if let user = dictionary["author"] as? String {
-            self._username = user
+            self.username = user
         } else {
-            self._username = ""
+            self.username = ""
         }
         
         // The above properties are assigned to their key
-        self._jokeRef = DataService.dataService.JOKE_REF.childByAppendingPath(self._jokeKey)
+        self.jokeRef = DataService.dataService.JOKE_REF.childByAppendingPath(self.jokeKey)
         
     }
     
@@ -67,14 +51,14 @@ class Joke {
     func addSubtractVote(addVote: Bool) {
         
         if addVote {
-            _jokeVotes = _jokeVotes + 1
+            jokeVotes = jokeVotes + 1
         } else {
-            _jokeVotes = _jokeVotes - 1
+            jokeVotes = jokeVotes - 1
         }
         
         // Save the new vote total.
         
-        _jokeRef.childByAppendingPath("votes").setValue(_jokeVotes)
+        jokeRef.childByAppendingPath("votes").setValue(jokeVotes)
         
     }
     
