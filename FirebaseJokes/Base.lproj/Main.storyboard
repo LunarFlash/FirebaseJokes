@@ -358,7 +358,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="thumb-up" width="30" height="30"/>
+        <image name="thumb-up" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="iyH-hF-GxC"/>

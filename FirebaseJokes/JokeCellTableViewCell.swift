@@ -25,11 +25,13 @@ class JokeCellTableViewCell: UITableViewCell {
         
         
         // UITapGestureRecognizer is set programatically.
-        
+        // MARK: - BUG
+        /*
         let tap = UITapGestureRecognizer(target: self, action: "voteTapped:")
         tap.numberOfTapsRequired = 1
         thumbVoteImage.addGestureRecognizer(tap)
         thumbVoteImage.userInteractionEnabled = true
+        */
     }
     
     func configureCell(joke: Joke) {
