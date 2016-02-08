@@ -27,6 +27,8 @@ class Joke {
         
         if let votes = dictionary["votes"] as? Int {
             self.jokeVotes = votes
+        } else {
+            self.jokeVotes = 0
         }
         
         if let joke = dictionary["jokeText"] as? String {

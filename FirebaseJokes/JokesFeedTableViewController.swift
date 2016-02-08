@@ -28,7 +28,7 @@ class JokesFeedTableViewController: UITableViewController {
             
             // The snapshot is a current look at our jokes data.
             
-            print(snapshot.value)
+            print("snapshot:\(snapshot.value)")
             
             self.jokes = []
             
