@@ -58,12 +58,12 @@ class JokeCellTableViewCell: UITableViewCell {
                 // Current user hasn't voted for the joke... yet.
                 
                 print(thumbsUpDown)
-                self.thumbVoteImage.image = UIImage(named: "thumb-down")
+                self.thumbVoteImage.image = UIImage(named: "thumb-up")
             } else {
                 
                 // Current user voted for the joke!
                 
-                self.thumbVoteImage.image = UIImage(named: "thumb-up")
+                self.thumbVoteImage.image = UIImage(named: "thumb-down")
             }
         })
     }
