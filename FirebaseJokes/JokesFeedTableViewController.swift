@@ -24,7 +24,7 @@ class JokesFeedTableViewController: UITableViewController {
         // It's always listening.
         
         
-        DataService.dataService.JOKE_REF.observeEventType(.Value, withBlock: { snapshot in
+        DataService.dataService.JOKE_REF.observeEventType(FEventType.Value, withBlock: { snapshot in
             
             // The snapshot is a current look at our jokes data.
             

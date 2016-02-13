@@ -281,6 +281,7 @@
 				TargetAttributes = {
 					2C724D4E1C53E7EB00A53EAF = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = W4UEM44YDP;
 					};
 					2C724D621C53E7EB00A53EAF = {
 						CreatedOnToolsVersion = 7.2;
@@ -541,6 +542,7 @@
 			baseConfigurationReference = F6EA7C03135F97A092D447B6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FirebaseJokes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gommmd.FirebaseJokes;
@@ -553,6 +555,7 @@
 			baseConfigurationReference = 15B494D6A68C5CCA2E2D2AA6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FirebaseJokes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gommmd.FirebaseJokes;

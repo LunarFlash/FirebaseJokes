@@ -13,7 +13,7 @@ class JokeCellTableViewCell: UITableViewCell {
     
     var joke: Joke!
     var voteRef: Firebase!
-
+    
     
     @IBOutlet weak var jokeText: UITextView!
     @IBOutlet weak var usernameLabel: UILabel!
